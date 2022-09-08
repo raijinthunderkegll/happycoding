@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions
+        xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+        xmlns:flowable="http://flowable.org/bpmn"
+        xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+        xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
+        typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath"
+        targetNamespace="Examples">
+
+    <process id="oneTaskProcess" name="The One Task Process">
+        <startEvent id="theStart" />
+        <sequenceFlow id="flow1" sourceRef="theStart" targetRef="theTask" />
+<!--        <userTask id="theTask" name="my task" flowable:assignee="kermit" />-->
+        <userTask id="theTask" name="my task" flowable:assignee="${assignee_0}" />
+        <sequenceFlow id="flow2" sourceRef="theTask" targetRef="theEnd" />
+        <endEvent id="theEnd" />
+    </process>
+    <bpmndi:BPMNDiagram id="BPMNDiagram_oneTaskProcess">
+        <bpmndi:BPMNPlane bpmnElement="oneTaskProcess" id="BPMNPlane_oneTaskProcess">
+            <bpmndi:BPMNShape id="shape-dbdba45e-b932-463a-be67-4c4a39acd3cd" bpmnElement="theStart">
+                <omgdc:Bounds x="-40.0" y="-115.0" width="30.0" height="30.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape id="shape-9ebf672c-89e4-4887-96bf-1dfe8a653a91" bpmnElement="theTask">
+                <omgdc:Bounds x="-35.0" y="-25.0" width="100.0" height="80.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape id="shape-fbe9e730-e475-4db6-ad65-540928330580" bpmnElement="theEnd">
+                <omgdc:Bounds x="-10.0" y="140.0" width="30.0" height="30.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNEdge id="edge-a8cbdbd1-ff40-4850-8011-7d3f4adbac99" bpmnElement="flow1">
+                <omgdi:waypoint x="-17.5" y="-85.0"/>
+                <omgdi:waypoint x="-10.0" y="-25.0"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge id="edge-a498b8f5-4fee-4d95-bbf8-16a6c750da75" bpmnElement="flow2">
+                <omgdi:waypoint x="15.0" y="55.0"/>
+                <omgdi:waypoint x="12.5" y="140.0"/>
+            </bpmndi:BPMNEdge>
+        </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+
+</definitions>

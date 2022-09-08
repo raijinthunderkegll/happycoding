@@ -1,0 +1,38 @@
+spring:
+  main:
+    log-startup-info: true
+    lazy-initialization: false
+  application:
+    name: start
+  profiles: "!test"
+  security:
+    user:
+      password: "123456"
+  resources:
+    static-locations: /resources/**
+server:
+  port: 2022
+my:
+  secret: ${random.value}
+  number: ${random.int}
+  inner:
+    name: 'hello panda'
+  map:
+    "[a]": "10"
+    "[b]":
+      "[c]": 66
+      "[d]": 77
+  list:
+    - 1
+    - 2
+    - lakdjfls
+  session-timeout: 100
+SYS:
+  NAME: "sysname"
+
+logging:
+  file:
+    path: /Users/yangjialong/own
+    name: hhh.log
+  pattern:
+    level: hello:%X{HOME} %5p

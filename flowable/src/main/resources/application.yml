@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    # Public Key Retrieval is not allowed报错添加 &allowPublicKeyRetrieval=true
+    # 当数据库中其他当schema里有activiti的表结构，flowable检测到了就不会建表了，解决办法添加 &nullCatalogMeansCurrent=true  让本schema成为默认的schema
+    url: jdbc:mysql://127.0.0.1:3306/happyflowable?useUnicode=true&useSSL=false&zeroDateTimeBehavior=convertToNull&characterEncoding=utf8&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true
+    username : happycoder
+    password : 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+flowable:
+  #关闭定时任务JOB
+  async-executor-activate: false
+  #  将databaseSchemaUpdate设置为true。当Flowable发现库与数据库表结构不一致时，会自动将数据库表结构升级至新版本。
+  database-schema-update: true
