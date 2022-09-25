@@ -18,6 +18,7 @@
         <module>cloudapi-pig</module>
         <module>cloud-common</module>
         <module>cloudapi-chicken</module>
+        <module>cxf</module>
     </modules>
 
 
