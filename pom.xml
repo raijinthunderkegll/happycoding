@@ -19,6 +19,8 @@
         <module>cloud-common</module>
         <module>cloudapi-chicken</module>
         <module>cxf</module>
+        <module>aop</module>
+        <module>juc</module>
     </modules>
 
 
