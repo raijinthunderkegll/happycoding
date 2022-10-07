@@ -14,6 +14,7 @@ public class LockSupportDemon {
     private static void lockSupport() {
         // unpark一次最多只能发放一个通行证
         // 允许先unpark，再park。 park时发现有通行证，直接放行
+        // 底层调用USAFE类的native方法代码
         Thread t1 = new Thread(() -> {
             System.out.println("线程park");
             LockSupport.park();
