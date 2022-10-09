@@ -231,5 +231,5 @@ public class CompletableFutureDemon {
 @AllArgsConstructor
 @NoArgsConstructor
 class User {
-    String name;
+    volatile String name;
 }
