@@ -1,5 +1,9 @@
 package com.happycoding.juc;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.concurrent.*;
 
 public class CompletableFutureDemon {
@@ -223,14 +227,9 @@ public class CompletableFutureDemon {
 
 }
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 class User {
     String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }
