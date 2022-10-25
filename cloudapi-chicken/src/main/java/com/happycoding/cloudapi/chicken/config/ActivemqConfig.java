@@ -4,14 +4,13 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.command.ActiveMQQueue;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.jms.config.JmsListenerContainerFactory;
 import org.springframework.jms.config.SimpleJmsListenerContainerFactory;
 
 import javax.jms.ConnectionFactory;
 import javax.jms.Queue;
 
-@Configuration
+//@Configuration
 public class ActivemqConfig {
     @Value("${spring.activemq.broker-url:tcp://127.0.0.1:61616}")
     private String brokerUrl;

@@ -21,6 +21,7 @@
         <module>cxf</module>
         <module>aop</module>
         <module>juc</module>
+        <module>file</module>
     </modules>
 
 

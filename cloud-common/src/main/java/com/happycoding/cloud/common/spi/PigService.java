@@ -15,4 +15,7 @@ public interface PigService {
     @RequestMapping("findPigByName")
     public SpiResponse<Pig> findPigByName(@RequestParam("name") String name);
 
+    @RequestMapping("port")
+    public SpiResponse<String> port();
+
 }

@@ -5,9 +5,8 @@ import com.happycoding.cloud.common.spi.PigService;
 import com.happycoding.common.model.SpiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.annotation.JmsListener;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+//@RestController
 public class ConsumerListener {
 
     @Autowired

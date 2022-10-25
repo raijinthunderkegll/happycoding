@@ -21,4 +21,9 @@ public class ChickenController {
         return pigService.findPig();
 //        return SpiResponse.ok();
     }
+
+    @GetMapping("port")
+    public SpiResponse<String> port(){
+        return pigService.port();
+    }
 }

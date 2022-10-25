@@ -37,13 +37,16 @@ public class AtomicDemon {
     }
 
     private static void atomicLong() throws InterruptedException {
-        int SIZE = 10000;
+        int SIZE = 10;
+        int times = 1000000;
         CountDownLatch countDownLatch = new CountDownLatch(SIZE);
         AtomicLong atomicLong = new AtomicLong();
         for (int i = 0; i < SIZE; i++) {
             new Thread(() -> {
                 try {
-                    atomicLong.getAndIncrement();
+                    for (int j = 0; j < times; j++) {
+                        atomicLong.getAndIncrement();
+                    }
                 } finally {
                     countDownLatch.countDown();
                 }
@@ -130,7 +133,15 @@ public class AtomicDemon {
     }, 0);
 
     /**
-     * JDK1.8新增的4个类，极大的提升性能，比AtomicXXX快很多，适合高并发场景
+     * JDK1.8新增的4个类，极大的提升性能，比AtomicXXX快很多，减少乐观锁的重试次数，适合高并发场景
+     *
+     * 10000000
+     * longAdder耗时：63毫秒
+     * 10000000
+     * longAccumulator耗时：42毫秒
+     * 10000000
+     * atomicLong耗时：616毫秒
+     *
      * <p>
      * LongAdder
      * LongAccumulator
@@ -139,25 +150,32 @@ public class AtomicDemon {
      */
     private static void longAdder() throws InterruptedException {
         // 累加
-        int times = 10000;
-        CountDownLatch countDownLatch = new CountDownLatch(times);
-        for (int i = 0; i < times; i++) {
+        int size = 10;
+        int times = 1000000;
+        CountDownLatch countDownLatch = new CountDownLatch(size);
+        for (int i = 0; i < size; i++) {
             new Thread(() -> {
-                longAdder.increment();
+                for (int j = 0; j < times; j++) {
+                    longAdder.increment();
+                }
                 countDownLatch.countDown();
             }).start();
         }
         countDownLatch.await();
-        System.out.println(longAdder.longValue());
+        // base + Cell[]
+        System.out.println(longAdder.sum());
     }
 
     private static void longAccumulator() throws InterruptedException {
         // 自定义计算函数
-        int times = 10000;
-        CountDownLatch countDownLatch = new CountDownLatch(times);
-        for (int i = 0; i < times; i++) {
+        int size = 10;
+        int times = 1000000;
+        CountDownLatch countDownLatch = new CountDownLatch(size);
+        for (int i = 0; i < size; i++) {
             new Thread(() -> {
-                longAccumulator.accumulate(2);
+                for (int j = 0; j < times; j++) {
+                    longAccumulator.accumulate(1);
+                }
                 countDownLatch.countDown();
             }).start();
         }
