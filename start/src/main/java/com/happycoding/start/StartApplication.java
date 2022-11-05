@@ -3,13 +3,12 @@ package com.happycoding.start;
 import com.happycoding.start.components.PropBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Date;
 
 @SpringBootApplication
 @RestController
@@ -26,6 +25,7 @@ public class StartApplication {
 
 
 //        new SpringApplicationBuilder();
+        System.out.println(new Date().getTime());
     }
 
     // 不能给static属性赋值

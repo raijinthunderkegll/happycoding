@@ -22,6 +22,8 @@
         <module>aop</module>
         <module>juc</module>
         <module>file</module>
+        <module>pay</module>
+        <module>pay/weixin-pay</module>
     </modules>
 
 
