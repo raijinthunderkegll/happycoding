@@ -21,5 +21,5 @@ public enum WxNotifyType {
 	/**
 	 * 类型
 	 */
-	private final String type;
+	public final String type;
 }

@@ -24,6 +24,8 @@
         <module>file</module>
         <module>pay</module>
         <module>pay/weixin-pay</module>
+        <module>likou</module>
+        <module>happy</module>
     </modules>
 
 

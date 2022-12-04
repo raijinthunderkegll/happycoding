@@ -2,12 +2,17 @@ package com.happycoding.pay.weixin.controller;
 
 import com.happycoding.pay.weixin.config.WxPayConfig;
 import com.happycoding.pay.weixin.service.NativePayService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+@Slf4j
 @RestController
 public class TestController {
 
@@ -55,5 +60,11 @@ public class TestController {
 //
 //        PrepayResponse response = service.prepay(request);
 //        System.out.println(response.getPrepayId());
+    }
+
+    @PostMapping("/api/wx-pay/native/notify")
+    public void nativeNotify(HttpServletRequest request, HttpServletResponse response){
+        log.info("微信支付结果通知");
+
     }
 }

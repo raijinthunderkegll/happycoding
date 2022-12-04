@@ -19,12 +19,20 @@
     <file url="file://$PROJECT_DIR$/file/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flowable/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flowable/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/happy/happyserver/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/happy/happyserver/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/happy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/happy/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/juc/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/juc/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/likou/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/likou/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pay/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pay/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pay/weixin-pay/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pay/weixin-pay/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springCloudDependencies/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springCloudDependencies/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/start/src/main/java" charset="UTF-8" />

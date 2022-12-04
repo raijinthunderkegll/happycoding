@@ -1,0 +1,9 @@
+server:
+  port: 2333
+spring:
+  application:
+    name: happyServer
+  # 容器启动时加载servlet
+  mvc:
+    servlet:
+      load-on-startup: 1
