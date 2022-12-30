@@ -14,7 +14,7 @@ public class LongestCommonPrefix {
         System.out.println(longestCommonPrefix(strs));
     }
 
-    public static String longestCommonPrefix(@NotNull String[] strs) {
+    public static String longestCommonPrefix(String[] strs) {
         int len = 0;
         char local = '\u0000';
 
